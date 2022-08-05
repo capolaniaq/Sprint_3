@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/contact.css" />
+  </head>
+
+  <body>
+    <div id="socialContainer" class="socialContainer">
+      <a href="https://github.com/Meowy02/Sprint2">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+          id="github"
+          class="github"
+          width="40px"
+          height="auto"
+          hspace="16"
+        />
+      </a>
+      <a href="https://twitter.com/">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/150px-Twitter-logo.svg.png"
+          id="fb"
+          class="fb"
+          width="44px"
+          height="auto"
+          hspace="16"
+        />
+      </a>
+      <a href="https://facebook.com">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/150px-Facebook_f_logo_%282021%29.svg.png"
+          id="tw"
+          class="tw"
+          width="40px"
+          height="auto"
+          hspace="16"
+        />
+      </a>
+      <a href="https://instagram.com">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
+          id="insta"
+          class="insta"
+          width="40px"
+          height="auto"
+          hspace="16"
+        />
+      </a>
+    </div>
+    <div id="callContainer" class="callContainer">
+      <p> <h3> <br> llamanos! ( <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Bandera_de_Espa%C3%B1a_%28nuevo_dise%C3%B1o%29.svg/800px-Bandera_de_Espa%C3%B1a_%28nuevo_dise%C3%B1o%29.svg.png" width="16PX" />) + 1 123456789 <br /> </h3></p>
+      <p> <h3> call us (<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/800px-Flag_of_the_United_States.svg.png" width="16PX"/>): + 1 123456789 </h3>  </p>
+    </div>
+    <div class="contact_form">
+      <div class="formulario">
+        <h1>Formulario de contacto</h1>
+        <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
+
+        <form action="submeter-formulario.php" method="post">
+          <p>
+            <label for="nombre" class="colocar_nombre"
+              >Nombre
+              <span class="obligatorio">*</span>
+            </label>
+            <input
+              type="text"
+              name="introducirNombre"
+              id="nombre"
+              required="obligatorio"
+              placeholder="Django unchained"
+            />
+          </p>
+
+          <p>
+            <label for="email" class="colocarEmail"
+              >Email
+              <span class="obligatorio">*</span>
+            </label>
+            <input
+              type="email"
+              name="introducirEmail"
+              id="email"
+              required="obligatorio"
+              placeholder="anotherExample@fourseasons.com"
+            />
+          </p>
+
+          <p>
+            <label for="telefone" class="colocarTelefono">Teléfono </label>
+            <input
+              type="tel"
+              name="introducirTelefono"
+              id="telefono"
+              placeholder="123456789"
+            />
+          </p>
+          <p>
+            <label for="asunto" class="colocarAsunto">
+              Asunto
+              <span class="obligatorio">*</span>
+            </label>
+            <input
+              type="text"
+              name="introducirAsunto"
+              id="assunto"
+              required="obligatorio"
+              placeholder="eje: Mas informacion de planes"
+            />
+          </p>
+
+          <p>
+            <label for="mensaje" class="colocarMensaje"
+              >Mensaje
+              <span class="obligatorio">*</span>
+            </label>
+            <textarea
+              name="introducirMensaje"
+              class="textoMensaje"
+              id="mensaje"
+              required="obligatorio"
+              placeholder="Deja aquí tu comentario..."
+            ></textarea>
+          </p>
+
+          <button type="submit" name="enviarFormulario" id="enviar">
+            <p>Enviar</p>
+          </button>
+
+          <p class="aviso">
+            <span class="obligatorio"> * </span> los campos son obligatorios.
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
