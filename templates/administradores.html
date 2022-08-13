@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/estilos2.css') }}">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+</head>
+<body>
+	<header>
+        <div class="titulo">
+            <p>
+            </p>
+			<a href="/">
+				<img
+				src="../static/images/img2.png"
+				alt=""
+				width="200"
+				height="100"
+			  />
+			</a>
+        </div>
+        <div class="lista">
+            <ul>
+                <li><a href="/alojamiento/">Alojamiento</a></li>
+            </ul>
+            <ul>
+                <li><a href="/usuarios/">usuarios</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+	<h3 class="title">ADMINISTRADORES</h3>
+    <button id="insert_room" class="btn btn-success">+</button>
+    <div class="col-md-4" id="div_insert">
+        <form action="/crear_admind/" method="post" class="form-horizontal">
+            <input class="form-control" type="text", name="identificacion" id="inputdefault" placeholder="identificacion">
+            <input class="form-control" type="text" name="name" id="inputdefault" placeholder="Nombre">
+            <input class="form-control" type="text" name="last_name" id="inputdefault" placeholder="Apellido">
+            <input class="form-control" type="text" name="email" id="inputdefault" placeholder="Correo">
+            <input class="form-control" type="text" name="password" id="inputdefault" placeholder="Contraseña">
+            
+            <input type="submit" value="Crear Administrador" class="btn btn-secondary" id="crear">
+        </form>
+        <button id="cancel_insert" class="btn btn-danger">Cancelar</button>
+    </div>
+
+    <div class="col-md-11" id="div-table">
+        <table>
+
+            <table id="table_rooms"  class="table table-striped">
+                <tr>
+                  <th scope="row">Id</th>
+                  <th>Identificacion</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Email</th>
+				  <th>Acciones</th>
+                </tr>
+                {% for admind in adminds %}
+                <tr>
+                  <th>{{admind[0]}}</th>
+                  <td>{{admind[1]}}</td>
+                  <td>{{admind[2]}}</td>
+                  <td>{{admind[3]}}</td>
+				  <td>{{admind[4]}}</td>
+                  <td>
+                    <button class="btn btn-primary">Ver</button>
+                    <button class="btn btn-warning">Editar</button>
+                    <button class="btn btn-danger">Eliminar</button>
+                  </td>
+                </tr>
+                {% endfor %}
+              </table>
+        </table>
+    </div>
+
+    {% block scripts %}
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% endblock %}
+
+</body>
+</html>

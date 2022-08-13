@@ -211,3 +211,50 @@ footer .texto-footer p{
     margin-left: 18%;
     margin-right: auto;
 }
+
+#insert_room {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#table_rooms{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#crear {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: right;
+}
+
+.form-control {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.title {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+#div-table {
+    text-align: center;
+    justify-content: center;
+}
+
+#div_insert {
+    text-align: center;
+    display: none;
+}
+
+#cancel_insert {
+    margin-left: 20px;
+    margin-top: -2px;
+}

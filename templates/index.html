@@ -12,21 +12,22 @@
     <header>
         <div class="titulo">
             <p>
-                
             </p>
-            <img
-                  src="../static/images/img2.png"
-                  alt=""
-                  width="200"
-                  height="100"
-                />
+			<a href="/">
+				<img
+				src="../static/images/img2.png"
+				alt=""
+				width="200"
+				height="100"
+			  />
+			</a>
         </div>
         <div class="lista">
             <ul>
-                <li><a href="#">Alojamiento</a></li>
+                <li><a href="/alojamiento/">Alojamiento</a></li>
             </ul>
             <ul>
-                <li><a href="../templates/experiences.html">Experiencias</a></li>
+                <li><a href="/experiences/">Experiencias</a></li>
             </ul>
             <ul>
                 <li><a href="#">Servicios</a></li>
@@ -35,11 +36,11 @@
                 <li><a href="#">Ofertas</a></li>
             </ul>
             <ul>
-                <li><a href="../templates/contact.html">Contacto</a></li>
+                <li><a href="/contact/">Contacto</a></li>
             </ul>
         </div>
         <div class="reservar">
-            <button><a href="#">Reserva Ya</a></button>
+            <button><a href="/reserva/">Reserva Ya</a></button>
         </div>
     </header>
     <section>
@@ -58,7 +59,7 @@
                         <p>----Entre las maravillas de kuala lumpur----</p>
                     </div>
                     <div class="boton">
-                        <button><a href="#">Reserva Ahora</a></button>
+                        <button><a href="/reserva/">Reserva Ahora</a></button>
                     </div>
                     <div class="iconos">
                         <ul>
@@ -77,6 +78,11 @@
                 <div class="descripcion">
                     <p>"¡Relájese, reconecte y disfrute de la excelencia en el encantador y fascinante paraíso del sudeste asiatico! ¡Descubra lo maravilloso de kuala Lumpur!, donde Four Seasons Place Kuala Lumpur fue exquisitamente diseñado para integrarse a la perfección en este singular lugar en el mundo."</p>
                 </div>
+                {% for room in rooms %}
+                <div class="descripcion">
+                    <p>{{room}}</p>
+                </div>
+                {% endfor %}
             </div>
             <div class="imagenes2">
                 <div><img

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/estilos2.css') }}">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+</head>
+<body>
+	<header>
+        <div class="titulo">
+            <p>
+            </p>
+			<a href="/">
+				<img
+				src="../static/images/img2.png"
+				alt=""
+				width="200"
+				height="100"
+			  />
+			</a>
+        </div>
+        <div class="lista">
+            <ul>
+                <li><a href="/usuarios/">Usuarios</a></li>
+            </ul>
+            <ul>
+                <li><a href="/administradores/">Administradores</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <h3 class="title">HABITACIONES KUALA LUMPUR</h3>
+    <button id="insert_room" class="btn btn-success">+</button>
+    <div class="col-md-4" id="div_insert">
+        <form action="/crear_room/" method="post" class="form-horizontal">
+            <input class="form-control" type="text", name="ubicacion" id="inputdefault" placeholder="ubicacion">
+            <input class="form-control" type="number" name="id_administrador" id="inputdefault" placeholder="id_administrador">
+            <input type="submit" value="Crear habitacion" class="btn btn-secondary" id="crear">
+        </form>
+        <button id="cancel_insert" class="btn btn-danger">Cancelar</button>
+    </div>
+
+    <div class="col-md-11" id="div-table">
+        <table>
+
+            <table id="table_rooms"  class="table table-striped">
+                <tr>
+                  <th scope="row">Id</th>
+                  <th>Ubicacion</th>
+                  <th>Nombre Ad</th>
+                  <th>Apellido Ad</th>
+                  <th>Acciones</th>
+                </tr>
+                {% for room in rooms %}
+                <tr>
+                  <th>{{room[0]}}</th>
+                  <td>{{room[1]}}</td>
+                  <td>{{room[2]}}</td>
+                  <td>{{room[3]}}</td>
+                  <td>
+                    <button class="btn btn-primary">Ver</button>
+                    <button class="btn btn-warning">Editar</button>
+                    <button class="btn btn-danger">Eliminar</button>
+                  </td>
+                </tr>
+                {% endfor %}
+              </table>
+        </table>
+    </div>
+
+    {% block scripts %}
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% endblock %}
+</body>
+</html>
