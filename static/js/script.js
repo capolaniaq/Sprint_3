@@ -28,3 +28,10 @@ btn_cancel_room.addEventListener('click', () =>{
 
 	btn_insert_room.style.cssText = 'display: block';
 })
+
+
+const btn_delete = document.getElementById('delete');
+
+btn_delete.addEventListener('click', () =>{
+	
+})

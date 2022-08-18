@@ -84,3 +84,9 @@ def crear_admind():
         id = id[0][0]
         scrip_sql.insert_admind(id)
     return redirect('/administradores/')
+
+@app.route('/delete_room/', methods=['POST'])
+def delete():
+    room = request.form.to_dict()
+    print(room)
+    return redirect('/alojamiento/')

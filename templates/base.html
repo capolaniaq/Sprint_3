@@ -62,9 +62,21 @@
                   <td>{{room[2]}}</td>
                   <td>{{room[3]}}</td>
                   <td>
-                    <button class="btn btn-primary">Ver</button>
-                    <button class="btn btn-warning">Editar</button>
-                    <button class="btn btn-danger">Eliminar</button>
+                    <div id="buttons_each_format">
+                        <form action="/ver/" method="post">
+                            <button type="submit" id="show_all" class="btn btn-primary">Ver</button>
+                        </form>
+
+                        <form action="/upload/" method="post">
+                            <button type="submit" id="upload" class="btn btn-warning">Editar</button>
+                        </form>
+
+                        <form action="/delete_room/" method="post">
+                            <button type="submit" id="delete" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </div>
+
+
                   </td>
                 </tr>
                 {% endfor %}
